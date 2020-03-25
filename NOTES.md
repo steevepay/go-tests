@@ -107,5 +107,18 @@ For example, the type slice: An array and a structure that records the length of
 ## Maps
 
 Collection of key value pair (like an object in javascript).
-The keys and values must be all the same type.
+The keys must be all the same type.
+The values must be all the same type.
 The key type can be different to values type.
+Reference Type.
+
+```go
+animals:= map[string]int{
+  "dog":23,
+  "cat":40,
+  "cow":22,
+}
+
+// Enveler une propriété
+remove(animals, "dog");
+```
