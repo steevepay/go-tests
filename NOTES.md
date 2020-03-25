@@ -97,7 +97,7 @@ var alex person
 
 ## Pointers
 
-When we pass variables to a function, GO in memory is copying the variables. If we want make changes, we must use pointers.
+When we pass variables to a function, GO in memory is copying the variables. If we want make changes, we must use a reference with a pointer.
 Must use pointer to change the values in a function:
 - int, float, string, bool, structs
 Must not use and be worry about pointer in a function (it is still copying but it is keeping a reference to the main data):
