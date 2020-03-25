@@ -126,8 +126,14 @@ remove(animals, "dog");
 
 ## Interfaces
 
+- Interfaces are not generic types
+- Interfaces are implicite, we don't have to say that our custom type satisfies some interface
+- Interfaces are not a requirement, sometimes taugh to use.
+- We can combine multiple interfaces into a single one.
+
 ```go
 type bot interface {
 	getGreating() string
 }
+// Now all functions getGreating are heritating from the bot type.
 ```
