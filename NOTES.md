@@ -31,6 +31,13 @@ var card string = "Long version"
 var card = "short"
 card := "this is also working"
 ```
+
+Zero values default:
+string = ""
+int = 0
+float = 0
+bool = false
+
 ## Array
 
 - Array: fix size
@@ -70,3 +77,35 @@ func TestXxxxx(t *testing.T) {
   t.Errorf("Description")
 })
 ```
+
+## Structs
+
+Examples: https://gobyexample.com/structs
+
+```go
+type person struct {
+  firstname string
+  lastname string
+  age int
+}
+
+// initialise 1
+alex := person{firstname: "Alex", lastname: "fewfew", age: 10}
+// initialise 2
+var alex person
+```
+
+## Pointers
+
+When we pass variables to a function, GO in memory is copying the variables. If we want make changes, we must use pointers.
+Must use pointer to change the values in a function:
+- int, float, string, bool, structs
+Must not use and be worry about pointer in a function (it is still copying but it is keeping a reference to the main data):
+- slices, maps, channels, pointers, functions
+For example, the type slice: An array and a structure that records the length of the slice, the capacity of the slice, and a reference to the underlying array. When we pass a slice,to a function, we are copying the structure, but the reference to the underlying array remains the same.
+
+## Maps
+
+Collection of key value pair (like an object in javascript).
+The keys and values must be all the same type.
+The key type can be different to values type.
