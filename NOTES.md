@@ -1,6 +1,7 @@
 # NOTES GO
 
 GO DOC: https://golang.org/pkg/
+Examples: https://gobyexample.com/
 
 ## commands
 ```bash
@@ -121,4 +122,12 @@ animals:= map[string]int{
 
 // Enveler une propriété
 remove(animals, "dog");
+```
+
+## Interfaces
+
+```go
+type bot interface {
+	getGreating() string
+}
 ```
