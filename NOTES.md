@@ -137,3 +137,24 @@ type bot interface {
 }
 // Now all functions getGreating are heritating from the bot type.
 ```
+
+## Go Routines
+
+Concurency, we can have multiple threads executing code. If one thred block, another one is picked up and worked on.
+Parallelism - Multiple threads executed at the exact same time. Require CPU's
+
+Utiliser les channels pour communiquer entre les routines.
+```go
+package main
+import "fmt"
+func main() {
+// Create a new channel with make(chan val-type). Channels are typed by the values they convey.
+    messages := make(chan string)
+// Send a value into a channel using the channel <- syntax. Here we send "ping" to the messages channel we made above, from a new goroutine.
+    go func() { messages <- "ping" }()
+// The <-channel syntax receives a value from the channel. Here we’ll receive the "ping" message we sent above and print it out.
+    msg := <-messages
+    fmt.Println(msg)
+}
+
+```
